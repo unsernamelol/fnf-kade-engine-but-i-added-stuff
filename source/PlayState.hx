@@ -2354,8 +2354,8 @@ class PlayState extends MusicBeatState
 
 		var iconOffset:Int = 26;
 
-		iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) + (150 * iconP1.scale.x - 150) / 2 - iconOffset;
-		iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) - (150 * iconP2.scale.x) / 2 - iconOffset * 2;
+		iconP1.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.05)) + (150 * iconP1.scale.x - 150) / 2 - iconOffset;
+		iconP2.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.05)) - (150 * iconP2.scale.x) / 2 - iconOffset * 2;
 
 		if (health > 2)
 			health = 2;
@@ -3543,7 +3543,7 @@ class PlayState extends MusicBeatState
 		switch (daRating)
 		{
 			case 'shit':
-				score = -300;
+				score = -200;
 				combo = 0;
 				misses++;
 				health -= 0.1;
@@ -3553,8 +3553,8 @@ class PlayState extends MusicBeatState
 					totalNotesHit -= 1;
 			case 'bad':
 				daRating = 'bad';
-				score = 0;
-				health -= 0.06;
+				score = 200;
+				health += 0.01;
 				ss = false;
 				bads++;
 				if (FlxG.save.data.accuracyMod == 0)
@@ -3562,13 +3562,14 @@ class PlayState extends MusicBeatState
 			case 'good':
 				daRating = 'good';
 				score = 200;
+                                health += 0.04;
 				ss = false;
 				goods++;
 				if (FlxG.save.data.accuracyMod == 0)
 					totalNotesHit += 0.75;
 			case 'sick':
 				if (health < 2)
-					health += 0.04;
+					health += 0.1;
 				if (FlxG.save.data.accuracyMod == 0)
 					totalNotesHit += 1;
 				sicks++;
