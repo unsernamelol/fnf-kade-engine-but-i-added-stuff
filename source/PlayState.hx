@@ -2346,8 +2346,8 @@ class PlayState extends MusicBeatState
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);
 
-		iconP1.setGraphicSize(Std.int(FlxMath.lerp(150, iconP1.width, 1.10)));
-		iconP2.setGraphicSize(Std.int(FlxMath.lerp(150, iconP2.width, 1.10)));
+		iconP1.setGraphicSize(Std.int(FlxMath.lerp(150, iconP1.width, 0.90)));
+		iconP2.setGraphicSize(Std.int(FlxMath.lerp(150, iconP2.width, 0.90)));
 
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
@@ -3554,7 +3554,7 @@ class PlayState extends MusicBeatState
 			case 'bad':
 				daRating = 'bad';
 				score = 200;
-				health += 0.01;
+				health += 0.02;
 				ss = false;
 				bads++;
 				if (FlxG.save.data.accuracyMod == 0)
@@ -4466,16 +4466,16 @@ class PlayState extends MusicBeatState
 		}
 		if (songMultiplier == 1)
 		{
-			iconP1.setGraphicSize(Std.int(iconP1.width + 30));
-			iconP2.setGraphicSize(Std.int(iconP2.width + 30));
+			iconP1.setGraphicSize(Std.int(iconP1.width + 10));
+			iconP2.setGraphicSize(Std.int(iconP2.width + 10));
 
 			iconP1.updateHitbox();
 			iconP2.updateHitbox();
 		}
 		else
 		{
-			iconP1.setGraphicSize(Std.int(iconP1.width + 4));
-			iconP2.setGraphicSize(Std.int(iconP2.width + 4));
+			iconP1.setGraphicSize(Std.int(iconP1.width + 2));
+			iconP2.setGraphicSize(Std.int(iconP2.width + 2));
 
 			iconP1.updateHitbox();
 			iconP2.updateHitbox();
