@@ -4474,8 +4474,8 @@ class PlayState extends MusicBeatState
 		}
 		else
 		{
-			iconP1.setGraphicSize(Std.int(iconP1.width + 2));
-			iconP2.setGraphicSize(Std.int(iconP2.width + 2));
+			iconP1.setGraphicSize(Std.int(iconP1.width + 6));
+			iconP2.setGraphicSize(Std.int(iconP2.width + 6));
 
 			iconP1.updateHitbox();
 			iconP2.updateHitbox();
