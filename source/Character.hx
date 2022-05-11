@@ -385,8 +385,18 @@ class Character extends FlxSprite
 
 				loadOffsetFile(curCharacter);
 				barColor = 0xFF9a00f8;
+                        case 'tankman':
+				frames = Paths.getSparrowAtlas('tankmanCaptain', 'shared', true);
+				animation.addByPrefix('idle', 'Tankman Idle Dance instance', 24, false);
+				animation.addByPrefix('singUP', 'Tankman UP note instance ', 24, false);
+				animation.addByPrefix('singRIGHT', 'Tankman Right Note instance', 24, false);
+				animation.addByPrefix('singDOWN', 'Tankman DOWN note instance', 24, false);
+				animation.addByPrefix('singLEFT', 'Tankman Note Left instance ', 24, false);
 
-				playAnim('idle');
+				loadOffsetFile(curCharacter);
+				barColor = 0xFFe1e1e1;
+
+                                flipX = true;
 			default:
 				parseDataFile();
 		}
